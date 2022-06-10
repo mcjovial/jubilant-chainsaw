@@ -4,11 +4,12 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Image from "next/image"
 import { HiOutlineChevronLeft, HiOutlineChevronRight, HiOutlineHeart, HiHeart } from "react-icons/hi";
+import { BsHeart, BsHeartFill } from 'react-icons/bs'
 import styles from '../styles/Slider.module.css'
 
 
 const SimpleSlider = () => {
-  const [like, setLike] = useState(true)
+  const [like, setLike] = useState(false)
   const sliderRef = useRef(null)
   console.log(sliderRef.current);
 
@@ -19,11 +20,41 @@ const SimpleSlider = () => {
   ]
 
   const settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     speed: 500,
     slidesToShow: 3,
-    slidesToScroll: 2
+    slidesToScroll: 2,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true
+        }
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2
+        }
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  }
+
+  const kFormatter = (num) => {
+    return Math.abs(num) > 999 ? Math.sign(num)*((Math.abs(num)/1000).toFixed(1)) + 'k' : Math.sign(num)*Math.abs(num)
   }
   
   return (
@@ -45,7 +76,7 @@ const SimpleSlider = () => {
             <div className={styles.card}>
               <Image src={charger.token_image} alt="Jane" width={530} height={400}/>
               <div className={styles.anyhow}>
-                <Image className={styles.author} src={charger.owner_image} alt="author" width={50} height={50} />
+                <Image className={styles.author} src={charger.owner_image} alt="author" width={60} height={60} />
               </div>
               <div className={styles.flexContainer}>
                 <div className={styles.authorName}>
@@ -54,10 +85,10 @@ const SimpleSlider = () => {
                 </div>
                 <div className={styles.authorLikes}>
                   {like
-                    ? <HiHeart className={styles.like} />
-                    : <HiOutlineHeart className={styles.like} />
+                    ? <BsHeartFill className={styles.like} />
+                    : <BsHeart className={styles.like} />
                   }
-                  <p>{charger.likes}k</p>
+                  <p>{kFormatter(charger.likes)}</p>
                 </div>
               </div>
             </div>
