@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import SimpleSlider from '../components/SimpleSlider'
+import About from '../components/About'
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
 
       <SimpleSlider />
 
+      <About/>
     </div>
   )
 }
