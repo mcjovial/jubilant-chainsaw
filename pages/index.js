@@ -5,6 +5,7 @@ import SimpleSlider from '../components/SimpleSlider'
 import About from '../components/About'
 import Cta from '../components/Cta'
 import CommunitySection from '../components/CommunitySection'
+import SubscribeSection from '../components/SubscribeSection'
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <About/>
       <Cta />
       <CommunitySection />
+      <SubscribeSection />
     </div>
   )
 }
