@@ -4,6 +4,7 @@ import styles from '../styles/Home.module.css'
 import SimpleSlider from '../components/SimpleSlider'
 import About from '../components/About'
 import Cta from '../components/Cta'
+import CommunitySection from '../components/CommunitySection'
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
 
       <About/>
       <Cta />
+      <CommunitySection />
     </div>
   )
 }
