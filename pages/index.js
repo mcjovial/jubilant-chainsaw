@@ -8,6 +8,7 @@ import CommunitySection from '../components/CommunitySection'
 import SubscribeSection from '../components/SubscribeSection'
 import Footer from '../components/Footer'
 import SiteMap from '../components/SiteMap'
+import Hero from '../components/Hero/Index'
 
 export default function Home() {
   return (
@@ -18,8 +19,10 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <div className='container'>
+        <Hero />
+      </div>
       <SimpleSlider />
-
       <About/>
       <Cta />
       <CommunitySection />
