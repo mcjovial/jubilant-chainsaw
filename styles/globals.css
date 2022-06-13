@@ -15,6 +15,48 @@ a {
   box-sizing: border-box;
 }
 
+.search-container input[type=text] {
+  padding: 6px;
+  font-size: 15px;
+  border: none;
+  border-color: #6AA94E;
+}
+.search-container .search-btn {
+  /* float: right; */
+  padding: 6px 10px;
+  /* margin-right: 5px; */
+  background: #fff;
+  color: #6AA94E;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  border-radius: 0 5px 5px 0;
+  
+}
+.search-container .search-btn:hover {
+  background: #6AA94E;
+  color: #fff;
+}
+
+.end-botn {
+  background: #6AA94E;
+  border-radius: 30px;
+  padding: 8px 20px;
+  text-decoration: none;
+  color: #fff;
+}
+.end-botn:hover {
+  cursor: pointer;
+  opacity: 0.99;
+  color: #000;
+}
+
+.login-botn {
+  text-decoration: none;
+  cursor: pointer;
+  color: #000;
+}
+
 footer p {
   text-align: left;
   font-weight: bold;
