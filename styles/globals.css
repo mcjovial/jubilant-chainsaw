@@ -14,3 +14,40 @@ a {
 * {
   box-sizing: border-box;
 }
+
+footer p {
+  text-align: left;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 52px;
+  color: #696767;
+  margin-bottom: 0;
+}
+
+footer li {
+  list-style: none;
+  text-align: left;
+  font-size: 18px;
+  line-height: 41px;
+  color: #000;
+}
+footer .icon{
+  margin-right: 20px;
+}
+
+@media (max-width: 575px) {
+  footer .content {
+    margin: 0 100px;
+    text-align: center;
+  }
+  footer p {
+    text-align: center;
+  }
+  footer li {
+    text-align: center;
+  }
+
+  footer .brand {
+    margin-bottom: 30px;
+  }
+}

@@ -6,6 +6,8 @@ import About from '../components/About'
 import Cta from '../components/Cta'
 import CommunitySection from '../components/CommunitySection'
 import SubscribeSection from '../components/SubscribeSection'
+import Footer from '../components/Footer'
+import SiteMap from '../components/SiteMap'
 
 export default function Home() {
   return (
@@ -22,6 +24,8 @@ export default function Home() {
       <Cta />
       <CommunitySection />
       <SubscribeSection />
+      {/* <Footer /> */}
+      <SiteMap/>
     </div>
   )
 }

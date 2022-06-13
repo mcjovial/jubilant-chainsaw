@@ -1,0 +1,68 @@
+.footer {
+  margin-left: 200px;
+  margin-bottom: 50px;
+  margin-top: 50px;
+  margin-right: 250px;
+}
+.footerContainer {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+.footerContainer p {
+  text-align: left;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 52px;
+  color: #696767;
+  margin-bottom: 0;
+}
+.footerContainer .footerItem li {
+  list-style: none;
+  text-align: left;
+  font-size: 18px;
+  line-height: 41px;
+  color: #000;
+}
+.footerContainer .footerItem .footerIcons {
+  /* display: flex;
+  justify-content: space-around; */
+}
+.footerBrand {
+  margin-top: 50px;
+}
+.footerBrand img {
+  margin-left: 0;
+}
+.footerSocial {
+  list-style: none;
+  text-align: left;
+  font-size: 18px;
+  color: #000;
+  justify-self: end;
+}
+.icon{
+  margin-right: 20px;
+}
+
+@media (max-width: 600px) {
+  .footerContainer {
+    flex-direction: column;
+    /* text-align: center; */
+  }
+  .footerContainer li {
+    text-align: center;
+  }
+}
+
+@media (max-width: 1000px) {
+  .footern{
+    margin-right: 200px;
+  }
+  .footerItem {
+    width: 50%;
+  }
+  .tabView {
+    
+  }
+}
