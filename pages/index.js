@@ -24,7 +24,7 @@ export default function Home() {
       <Cta />
       <CommunitySection />
       <SubscribeSection />
-      {/* <Footer /> */}
+      <Footer />
       <SiteMap/>
     </div>
   )

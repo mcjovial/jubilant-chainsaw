@@ -1,4 +1,4 @@
-.footer {
+/* .footer {
   margin-left: 200px;
   margin-bottom: 50px;
   margin-top: 50px;
@@ -24,10 +24,6 @@
   line-height: 41px;
   color: #000;
 }
-.footerContainer .footerItem .footerIcons {
-  /* display: flex;
-  justify-content: space-around; */
-}
 .footerBrand {
   margin-top: 50px;
 }
@@ -48,7 +44,6 @@
 @media (max-width: 600px) {
   .footerContainer {
     flex-direction: column;
-    /* text-align: center; */
   }
   .footerContainer li {
     text-align: center;
@@ -63,6 +58,18 @@
     width: 50%;
   }
   .tabView {
-    
+
   }
+} */
+.over hr {
+  margin: 0;
+}
+.siteMap {
+  display: flex;
+  justify-content: center;
+}
+.siteMap span {
+  font-weight: bold;
+  margin: 5px 50px;
+  text-decoration: underline #696767 dashed;
 }
