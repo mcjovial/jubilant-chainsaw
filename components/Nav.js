@@ -29,14 +29,30 @@ const Nav = () => {
       
       <div className="md:flex-[0.5] flex-initial justify-center items-center">
         {/* <img src={logo} alt="logo" className="w-32 cursor-pointer " /> */}
-        <span className="text-green-600 text-2xl font-extrabold">eVolt</span>
+        <span className="text-green-600 text-3xl font-extrabold items-center">eVolt</span>
       </div>
 
       <ul className="text-grey-700 md:flex hidden list-none flex-row justify-between items-center flex-initial">
-        {["Market", "Exchange", "Tutorials", "Wallets"].map((item, index) => (
+        <li className='search-container'>
+          <form onSubmit={handleSearch} className='inline-flex items-center'>
+            <input type="text" placeholder="Search..." value={query} onChange={(e) => setQuery(e.target.value)}/>
+            <a className='search-btn' type="submit"><ImSearch/></a>
+          </form>
+        </li>
+        {["Home", "Marketplace", "Wallets"].map((item, index) => (
           <NavBarItem key={item + index} title={item} />
         ))}
-        {isAuth ? (
+        <li className="nav-item dropdown">
+           <a className="nav-link link-dark dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+             More
+           </a>
+           <ul className="dropdown-menu" aria-labelledby="navbarDarkDropdownMenuLink">
+             <li><a className="dropdown-item" href="#">Exchange</a></li>
+             <li><a className="dropdown-item" href="#">Tutorials</a></li>
+             <li><a className="dropdown-item" href="#">Something else here</a></li>
+           </ul>
+         </li>
+        {!isAuth ? (
           <>
             <li className="text-grey-700 hover:text-white py-2 px-7 ml-10 hover:rounded-full cursor-pointer hover:bg-green-700">
               Login
@@ -64,7 +80,14 @@ const Nav = () => {
             flex flex-col justify-start items-end rounded-md blue-glassmorphism text-white animate-slide-in"
           >
             <li className="text-xl w-full my-2"><AiOutlineClose onClick={() => setToggleMenu(false)} /></li>
-            {["Market", "Exchange", "Tutorials", "Wallets"].map(
+
+            <li className='mr-5 search-container'>
+              <form onSubmit={handleSearch}>
+                <input className='rounded' type="text" placeholder="Search..." value={query} onChange={(e) => setQuery(e.target.value)}/>
+                {/* <a className='search-btn' type="submit"><ImSearch/></a> */}
+              </form>
+            </li>
+            {["Marketplace", "Exchange", "Tutorials", "Wallets"].map(
               (item, index) => <NavBarItem key={item + index} title={item} classprops="my-2 text-lg" />,
             )}
             {!isAuth ? (
@@ -92,12 +115,12 @@ const Nav = () => {
     //     </Link>
 
     //     <ul className="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-    //       <li className='search-container'>
-    //         <form onSubmit={handleSearch}>
-    //           <input type="text" placeholder="Search..." value={query} onChange={(e) => setQuery(e.target.value)}/>
-    //           <a className='search-btn' type="submit"><ImSearch/></a>
-    //         </form>
-    //       </li>
+          // <li className='search-container'>
+          //   <form onSubmit={handleSearch}>
+          //     <input type="text" placeholder="Search..." value={query} onChange={(e) => setQuery(e.target.value)}/>
+          //     <a className='search-btn' type="submit"><ImSearch/></a>
+          //   </form>
+          // </li>
     //       <li><a href="#" className="nav-link px-2 link-secondary">Home</a></li>
     //       <li><a href="#" className="nav-link px-2 link-dark">Marketplace</a></li>
     //       <li><a href="#" className="nav-link px-2 link-dark">More</a></li>
