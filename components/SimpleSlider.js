@@ -7,6 +7,12 @@ import { HiOutlineChevronLeft, HiOutlineChevronRight, HiOutlineHeart, HiHeart } 
 import { BsHeart, BsHeartFill } from 'react-icons/bs'
 import styles from '../styles/Slider.module.css'
 
+import token1 from '../public/assets/token1.png'
+import token2 from '../public/assets/token2.png'
+import token3 from '../public/assets/token3.png'
+import z1 from '../public/assets/z1.png'
+import z2 from '../public/assets/z2.png'
+import z3 from '../public/assets/z3.png'
 
 const SimpleSlider = () => {
   const [like, setLike] = useState(false)
@@ -14,9 +20,9 @@ const SimpleSlider = () => {
   console.log(sliderRef.current);
 
   const chargers = [
-    { token_image: "http://localhost:3000/assets/token1.png", owner_image: "http://localhost:3000/assets/z1.png", owner: "McJovial", token_name: "Neon Chargers", description: "Purchase e-electric car chargers using tokens (NFTs) and get the best offers", link: "#", likes: 4500, liked: [] },
-    { token_image: "http://localhost:3000/assets/token2.png", owner_image: "http://localhost:3000/assets/z2.png", owner: "McJovial", token_name: "Gold Chargers", description: "Purchase e-electric car chargers using tokens (NFTs) and get the best offers", link: "#", likes: 4500, liked: [] },
-    { token_image: "http://localhost:3000/assets/token3.png", owner_image: "http://localhost:3000/assets/z3.png", owner: "McJovial", token_name: "Silver Chargers", description: "Purchase e-electric car chargers using tokens (NFTs) and get the best offers", link: "#", likes: 4500, liked: [] },
+    { token_image: token1, owner_image: z1, owner: "McJovial", token_name: "Neon Chargers", description: "Purchase e-electric car chargers using tokens (NFTs) and get the best offers", link: "#", likes: 4500, liked: [] },
+    { token_image: token2, owner_image: z2, owner: "McJovial", token_name: "Gold Chargers", description: "Purchase e-electric car chargers using tokens (NFTs) and get the best offers", link: "#", likes: 4500, liked: [] },
+    { token_image: token3, owner_image: z3, owner: "McJovial", token_name: "Silver Chargers", description: "Purchase e-electric car chargers using tokens (NFTs) and get the best offers", link: "#", likes: 4500, liked: [] },
   ]
 
   const settings = {

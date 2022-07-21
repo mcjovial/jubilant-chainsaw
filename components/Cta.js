@@ -1,30 +1,35 @@
 import Image from 'next/image'
 import React from 'react'
 import styles from '/styles/Cta.module.css'
-import background from '../public/assets/curvy.png'
+
+import token1 from '../public/assets/token1.png'
+import z1 from '../public/assets/z1.png'
+import z2 from '../public/assets/z2.png'
+import curvy from '../public/assets/curvy.png'
+
 
 const Cta = () => {
   const mostPopularCharger = {
-    token_image: "http://localhost:3000/assets/token1.png",
-    owner_image: "http://localhost:3000/assets/z1.png",
+    token_image: token1,
+    owner_image: z1,
     owner: "McJovial",
     token_name: "Helion Charger 2.0",
     description: "Purchase e-electric car chargers using tokens (NFTs) and get the best offers",
     link: "#",
     likes: 4500,
     liked: [
-      {image: 'http://localhost:3000/assets/z1.png'},
-      {image: 'http://localhost:3000/assets/z2.png'},
-      {image: 'http://localhost:3000/assets/z1.png'},
+      {image: z1},
+      {image: z2},
+      {image: z1},
     ],
   }
    const popularChargers = [
-    { token_image: "http://localhost:3000/assets/z1.png", owner_image: "http://localhost:3000/assets/z1.png", owner: "McJovial", token_name: "Neon Chargers", description: "Purchase e-electric car chargers using tokens (NFTs) and get the best offers", link: "#", likes: 4500, liked: [], top: '40', right: '-610', index: '3' },
-    { token_image: "http://localhost:3000/assets/z2.png", owner_image: "http://localhost:3000/assets/z2.png", owner: "McJovial", token_name: "Gold Chargers", description: "Purchase e-electric car chargers using tokens (NFTs) and get the best offers", link: "#", likes: 4500, liked: [], top: '20', right: '-300', index: '2' },
-    { token_image: "http://localhost:3000/assets/z1.png", owner_image: "http://localhost:3000/assets/z1.png", owner: "McJovial", token_name: "Silver Chargers", description: "Purchase e-electric car chargers using tokens (NFTs) and get the best offers", link: "#", likes: 4500, liked: [], top: '', right: '', index: '1' },
+    { token_image: z1, owner_image: z1, owner: "McJovial", token_name: "Neon Chargers", description: "Purchase e-electric car chargers using tokens (NFTs) and get the best offers", link: "#", likes: 4500, liked: [], top: '40', right: '-610', index: '3' },
+    { token_image: z2, owner_image: z2, owner: "McJovial", token_name: "Gold Chargers", description: "Purchase e-electric car chargers using tokens (NFTs) and get the best offers", link: "#", likes: 4500, liked: [], top: '20', right: '-300', index: '2' },
+    { token_image: z1, owner_image: z1, owner: "McJovial", token_name: "Silver Chargers", description: "Purchase e-electric car chargers using tokens (NFTs) and get the best offers", link: "#", likes: 4500, liked: [], top: '', right: '', index: '1' },
   ]
   return (
-    <div className={styles.ctaContainer} style={{backgroundImage: `url('http://localhost:3000/assets/curvy.png')`, backgroundSize: '100% 100%', margin: 0}}>
+    <div className={styles.ctaContainer} style={{backgroundImage: `url(${curvy.src})`, backgroundSize: '100% 100%', margin: 0}}>
       <div className={styles.Cta}>
         <div className={styles.ctaRow}>
           <div className={styles.ctaDetails}>
