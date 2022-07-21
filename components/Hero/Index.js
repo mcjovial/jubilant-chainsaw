@@ -7,9 +7,9 @@ const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const slides = [
-    { image: "http://localhost:3000/assets/slide1.png", title: "Find the good car charger that suits your taste", description: "Purchase e-electric car chargers using tokens (NFTs) and get the best offers", link: "#" },
-    { image: "http://localhost:3000/assets/slide2.png", title: "Find the better car charger that suits your taste", description: "Purchase e-electric car chargers using tokens (NFTs) and get the best offers", link: "#" },
-    { image: "http://localhost:3000/assets/slide3.png", title: "Find the best car charger that suits your taste", description: "Purchase e-electric car chargers using tokens (NFTs) and get the best offers", link: "#" },
+    { image: "https://mdbootstrap.com/img/Photos/Slides/img%20(15).jpg", title: "Find the good car charger that suits your taste", description: "Purchase e-electric car chargers using tokens (NFTs) and get the best offers", link: "#" },
+    { image: "https://mdbootstrap.com/img/Photos/Slides/img%20(22).jpg", title: "Find the better car charger that suits your taste", description: "Purchase e-electric car chargers using tokens (NFTs) and get the best offers", link: "#" },
+    { image: "https://mdbootstrap.com/img/Photos/Slides/img%20(23).jpg", title: "Find the best car charger that suits your taste", description: "Purchase e-electric car chargers using tokens (NFTs) and get the best offers", link: "#" },
   ]
 
   return (
