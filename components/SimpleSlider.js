@@ -61,10 +61,10 @@ const SimpleSlider = () => {
     <div className={styles.popularChargers}>
       <div className={styles.heading}>
         <div className={styles.headingText}>
-          <p className={styles.primary}>Popular Chargers</p>
-          <p className={styles.secondary}>Get the latest car chargers</p>
+          <p className='text-2xl mb-0 font-bold'>Popular Chargers</p>
+          <p className='text-sm text-gray-400'>Get the latest car chargers</p>
         </div>
-        <div className={styles.controls}>
+        <div className='flex self-center'>
           <HiOutlineChevronLeft className={styles.arrow} onClick={() => sliderRef.current.slickPrev()} />
           <HiOutlineChevronRight className={styles.arrow} onClick={() => sliderRef.current.slickNext()} />
         </div>
@@ -81,7 +81,7 @@ const SimpleSlider = () => {
               <div className={styles.flexContainer}>
                 <div className={styles.authorName}>
                   <h2>{charger.token_name}</h2>
-                  <p className={styles.title}>{charger.owner}</p>
+                  <p className='text-xs text-gray-400'>{charger.owner}</p>
                 </div>
                 <div className={styles.authorLikes}>
                   {like

@@ -10,11 +10,11 @@ const Footer = () => {
   return (
     <footer className='container'>
       <div className='row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-4 py-5 content'>
-        <div className='col align-items-start brand'>
+        <div className='col justify-between '>
           <Image src={logo} alt='Logo' width={150} height={30} />
           <div className=''>
             <p>Follow Us</p>
-            <div className=''>
+            <div className='flex'>
               <BsInstagram size='1.7em' className='icon'/>
               <BsTwitter size='1.7em' className='icon'/>
               <AiFillFacebook size='1.7em' className='icon' />
@@ -22,13 +22,13 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className='col align-items-center'>
+        <div className=''>
           <p>Company</p>
-          {/* <ul> */}
+          <div className=''>
             <li>About</li>
             <li>Blog</li>
             <li>Careers</li>
-          {/* </ul> */}
+          </div>
         </div>
         <div className='col align-items-start'>
           <p>Contact</p>
